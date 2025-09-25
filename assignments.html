@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Assignments & Notes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="navbar">
+    <a href="dashboard.html">🏠 Dashboard</a>
+    <a href="assignments.html">📚 Assignments & Notes</a>
+  </div>
+
+  <div class="container">
+    <h1>📚 Upload Assignment</h1>
+    <form method="POST" action="/upload-assignment" enctype="multipart/form-data">
+      <input type="file" name="upload" required>
+      <label>Due Date:</label>
+      <input type="date" name="due" required>
+      <input type="submit" class="btn-primary" value="Upload Assignment">
+    </form>
+
+    <hr>
+
+    <h1>📝 Upload Note</h1>
+    <form method="POST" action="/upload-note" enctype="multipart/form-data">
+      <input type="file" name="upload" required>
+      <input type="submit" class="btn-primary" value="Upload Note">
+    </form>
+
+    <hr>
+
+    <h2>🔍 Search Files</h2>
+    <input type="text" id="searchInput" placeholder="Search files..." onkeyup="filterFiles()" class="search-box">
+    <ul id="fileList">
+      <!-- ESP32 injects file list here -->
+    </ul>
+  </div>
+
+  <script>
+    function filterFiles() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const items = document.querySelectorAll('#fileList li');
+      items.forEach(item => {
+        item.style.display = item.textContent.toLowerCase().includes(input) ? '' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
