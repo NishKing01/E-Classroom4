@@ -1,39 +1,61 @@
 :root {
-  --primary-color: #4A148C;         /* Deep purple */
-  --hover-color: #6A1B9A;           /* Slightly lighter for hover */
-  --background-color: #1A1A2E;      /* Dark background */
-  --card-color: #2E2E3E;            /* Card background */
-  --text-color: #EDE7F6;            /* Light text */
-  --accent-color: #CE93D8;          /* Soft purple accent */
+  --primary-color: #4A148C;
+  --hover-color: #6A1B9A;
+  --background-color: #1A1A2E;
+  --card-color: #2E2E3E;
+  --text-color: #EDE7F6;
+  --accent-color: #CE93D8;
 }
 
 body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
+  display: flex;
 }
 
-.navbar {
+.sidebar {
+  width: 60px;
   background-color: var(--primary-color);
-  padding: 10px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  height: 100vh;
+  position: fixed;
 }
 
-.navbar a {
-  color: var(--text-color);
-  margin: 0 15px;
+.sidebar a {
+  color: white;
+  margin: 20px 0;
   text-decoration: none;
-  font-weight: bold;
+  font-size: 24px;
 }
 
-.navbar a:hover {
+.sidebar a:hover {
   color: var(--accent-color);
 }
 
-.container {
+.header {
+  background-color: var(--card-color);
+  padding: 10px 20px;
+  width: calc(100% - 60px);
+  margin-left: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.main {
   padding: 20px;
+  margin-left: 60px;
+  flex-grow: 1;
 }
 
 input[type="file"],
@@ -62,24 +84,4 @@ input[type="submit"],
 
 .btn-primary:hover {
   background-color: var(--hover-color);
-}
-
-.material-icons {
-  vertical-align: middle;
-  margin-right: 5px;
-}
-
-.card-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.card {
-  background-color: var(--card-color);
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-  padding: 20px;
-  width: 300px;
-  color: var(--text-color);
 }
