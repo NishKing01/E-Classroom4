@@ -1,14 +1,16 @@
 :root {
-  --primary-color: #9C27B0;
-  --hover-color: #7B1FA2;
-  --background-color: #f3e5f5;
-  --text-color: #212121;
+  --primary-color: #4A148C;         /* Deep purple */
+  --hover-color: #6A1B9A;           /* Slightly lighter for hover */
+  --background-color: #1A1A2E;      /* Dark background */
+  --card-color: #2E2E3E;            /* Card background */
+  --text-color: #EDE7F6;            /* Light text */
+  --accent-color: #CE93D8;          /* Soft purple accent */
 }
 
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -20,14 +22,14 @@ body {
 }
 
 .navbar a {
-  color: white;
+  color: var(--text-color);
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
 }
 
 .navbar a:hover {
-  color: #e1bee7;
+  color: var(--accent-color);
 }
 
 .container {
@@ -43,15 +45,41 @@ input[type="submit"],
   padding: 10px;
   width: 100%;
   max-width: 400px;
+  background-color: var(--card-color);
+  color: var(--text-color);
+  border: 1px solid var(--accent-color);
 }
 
 .btn-primary {
   background-color: var(--primary-color);
-  color: white;
+  color: var(--text-color);
   border: none;
   cursor: pointer;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
 }
 
 .btn-primary:hover {
   background-color: var(--hover-color);
+}
+
+.material-icons {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--card-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  padding: 20px;
+  width: 300px;
+  color: var(--text-color);
 }
