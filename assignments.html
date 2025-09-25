@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Assignments & Notes</title>
+  <title>Classwork</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
   <div class="navbar">
-    <a href="dashboard.html">🏠 Dashboard</a>
-    <a href="assignments.html">📚 Assignments & Notes</a>
+    <a href="dashboard.html">Stream</a>
+    <a href="assignments.html">Classwork</a>
   </div>
 
   <div class="container">
-    <h1>📚 Upload Assignment</h1>
+    <h1><span class="material-icons">assignment</span> Upload Assignment</h1>
     <form method="POST" action="/upload-assignment" enctype="multipart/form-data">
       <input type="file" name="upload" required>
       <label>Due Date:</label>
@@ -19,20 +21,16 @@
       <input type="submit" class="btn-primary" value="Upload Assignment">
     </form>
 
-    <hr>
-
-    <h1>📝 Upload Note</h1>
+    <h1><span class="material-icons">note</span> Upload Note</h1>
     <form method="POST" action="/upload-note" enctype="multipart/form-data">
       <input type="file" name="upload" required>
       <input type="submit" class="btn-primary" value="Upload Note">
     </form>
 
-    <hr>
-
-    <h2>🔍 Search Files</h2>
+    <h2><span class="material-icons">search</span> Search Files</h2>
     <input type="text" id="searchInput" placeholder="Search files..." onkeyup="filterFiles()" class="search-box">
     <ul id="fileList">
-      <!-- ESP32 injects file list here -->
+      <!-- ESP32 will inject file list here -->
     </ul>
   </div>
 
