@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Classroom by Danish</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>E-Classroom</h1>
+    <p>Smart Learning Tools By Eduhub</p>
+  </header>
+
+  <nav>
+    <button onclick="showSection('overview')">Overview</button>
+    <button onclick="showSection('dashboard')">Dashboard</button>
+    <button onclick="showSection('upload')">Upload</button>
+    <button onclick="showSection('contact')">Contact</button>
+  </nav>
+
+  <main>
+    <section id="overview">
+      <h2>Overview</h2>
+      <p>This offline-ready platform delivers learning materials, assignments, and smart tools — hosted directly from ESP32.
+        Also it is designed to solve one of the biggest barriers in education-lack of internet access. Powered by the ESP32, 
+        it creates a local Wi-Fi network that lets students connect with their phones to access learning materials such as 
+        textbooks, notes, and quizzes directly from an SD card.Students can complete quizzes offline, and their results are saved
+        for teachers to review later. With its low cost, portability, and ease of use, E-Classroom brings digital learning to rural
+        and underserved communities-ensuring no student is left behind.
+    </p>
+    </section>
+
+    <section id="dashboard" style="display:none;">
+      <h2>Dashboard</h2>
+      <label for="subjectSelect">Choose Subject:</label>
+      <select id="subjectSelect" onchange="renderDashboard()">
+        <option value="physics">Physics</option>
+        <option value="chemistry">Chemistry</option>
+        <option value="math">Math</option>
+      </select>
+      <div id="dashboardContent"></div>
+    </section>
+
+    <section id="upload" style="display:none;">
+      <h2>Upload Learning Material</h2>
+      <input type="file" id="fileInput" />
+      <div id="previewArea"></div>
+    </section>
+
+    <section id="contact" style="display:none;">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:Eduhub@gmail.com">Eduhub@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 E-Classroom by Eduhub</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
