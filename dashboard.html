@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Assignments</title>
+  <title>E-Classroom</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -14,34 +14,13 @@
   </div>
 
   <div class="header">
-    <span class="title">Assignments</span>
+    <span class="title">E-Classroom</span>
     <span class="material-icons">account_circle</span>
   </div>
 
   <div class="main">
-    <h2>Upload Assignment</h2>
-    <form method="POST" action="/upload-assignment" enctype="multipart/form-data">
-      <input type="file" name="upload" required>
-      <label>Due Date:</label>
-      <input type="date" name="due" required>
-      <input type="submit" class="btn-primary" value="Upload Assignment">
-    </form>
-
-    <h2>Search Assignments</h2>
-    <input type="text" id="searchInput" placeholder="Search assignments..." onkeyup="filterFiles()" class="search-box">
-    <ul id="fileList">
-      <!-- ESP32 injects assignment list here -->
-    </ul>
+    <h1>Welcome to E-Classroom</h1>
+    <p>Select a tab to get started.</p>
   </div>
-
-  <script>
-    function filterFiles() {
-      const input = document.getElementById('searchInput').value.toLowerCase();
-      const items = document.querySelectorAll('#fileList li');
-      items.forEach(item => {
-        item.style.display = item.textContent.toLowerCase().includes(input) ? '' : 'none';
-      });
-    }
-  </script>
 </body>
 </html>
