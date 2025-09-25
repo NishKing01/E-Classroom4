@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Notes</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <div class="sidebar">
+    <a href="dashboard.html"><span class="material-icons">home</span></a>
+    <a href="notes.html"><span class="material-icons">note</span></a>
+    <a href="assignments.html"><span class="material-icons">assignment</span></a>
+  </div>
+
+  <div class="header">
+    <span class="title">Notes</span>
+    <span class="material-icons">account_circle</span>
+  </div>
+
+  <div class="main">
+    <h2>Upload Note</h2>
+    <form method="POST" action="/upload-note" enctype="multipart/form-data">
+      <input type="file" name="upload" required>
+      <input type="submit" class="btn-primary" value="Upload Note">
+    </form>
+
+    <h2>Search Notes</h2>
+    <input type="text" id="searchInput" placeholder="Search notes..." onkeyup="filterFiles()" class="search-box">
+    <ul id="fileList">
+      <!-- ESP32 injects note list here -->
+    </ul>
+  </div>
+
+  <script>
+    function filterFiles() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const items = document.querySelectorAll('#fileList li');
+      items.forEach(item => {
+        item.style.display = item.textContent.toLowerCase().includes(input) ? '' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
