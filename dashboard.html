@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dashboard</title>
+  <title>Stream</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
   <div class="navbar">
-    <a href="dashboard.html">🏠 Dashboard</a>
-    <a href="assignments.html">📚 Assignments & Notes</a>
+    <a href="dashboard.html">Stream</a>
+    <a href="assignments.html">Classwork</a>
   </div>
 
   <div class="container">
-    <h1>Welcome to E-Classroom</h1>
+    <h1><span class="material-icons">home</span> Welcome to E-Classroom</h1>
     <p>Connect to Wi-Fi <strong>E-Classroom</strong> and visit <strong>192.168.4.1</strong> to access this site offline.</p>
 
-    <h2>📅 Assignments Due Soon</h2>
+    <h2><span class="material-icons">event</span> Assignments Due Soon</h2>
     <iframe src="/due-soon" style="width:100%; height:200px; border:none;"></iframe>
 
-    <h2>📁 Browse All Files</h2>
+    <h2><span class="material-icons">folder</span> Browse All Files</h2>
     <a href="/files" class="btn-primary">View Uploaded Files</a>
   </div>
 </body>
